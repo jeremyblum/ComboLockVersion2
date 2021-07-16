@@ -51,8 +51,9 @@ public class Solution implements Comparable<Solution> {
 					if (closestNextDist == 2) break; // Already found two words very close
 				}
 				double ave = (closestDist + closestNextDist) / 2.0;
-				if(ave > adjustment){
-					adjustment = ave;
+				double aveMinusClsDist = ave - closestDist;
+				if(aveMinusClsDist > adjustment){
+					adjustment = aveMinusClsDist;
 				}
 				overallAve[i] = 1 + ave;
 			}
@@ -159,8 +160,8 @@ public class Solution implements Comparable<Solution> {
 	/** 
 	 * Return distance of words using current lock configuration
 	 * 
-	 * @param word1
-	 * @param word2
+	 * @param word1Ndx
+	 * @param word2Ndx
 	 * @return
 	 */
 	int distance(int word1Ndx, int word2Ndx) {

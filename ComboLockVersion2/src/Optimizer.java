@@ -17,9 +17,9 @@ public class Optimizer {
 	static boolean USE_ELITISM = true; // Do we use elitism in determining which solutions to kill
 	
 	// The operators used to produce the initial solutions
-	static InitializationOperator[] initOps = { new InitOpRandom(), new InitOpChooseWords()};
+	static InitializationOperator[] initOps = { new InitOpRandom(), new InitOpChooseWords(), new InitOpCommonLetters(), new InitOpRandom()};
 	// The weight that determines how likely each initialization operator will be used
-	static double[] initOpWeights = {1.0,1.0};
+	static double[] initOpWeights = {1.0,1.0,1.0,1.0};
 	
 	// A list of mutation operators to apply to the solutions
 	static MutationOperator[] mutationOperators = { new MutateChooseLetterFromWord(),
@@ -37,44 +37,44 @@ public class Optimizer {
 		prng = new Random(SEED);
 		Population population = new Population(initOps, initOpWeights, populationSize);
 
-//		for (int g = 0; g < generations; g++) {
-//			System.out.println("Generation " + (g+1));
-//			population.runGeneration(mutationOperators, mutationMaxTimes);
-//		}
-//		System.out.print("Best solution, score: ");
-//		System.out.println(population.getBest().getScore());
-//		System.out.println(population.getBest().toString());
-
-		int min = Integer.MAX_VALUE;
-		int max = Integer.MIN_VALUE;
-		double sum = 0.0;
-		int[] bestGenerations = new int[rounds];
-		for(int r = 0; r < rounds; r++){
-			boolean minGenerationFound = false;
-			for (int g = 0; g < generations; g++) {
-				System.out.println("Generation " + (g+1));
-				population.runGeneration(mutationOperators, mutationMaxTimes);
-				if(!minGenerationFound && population.getBest().getScore() == totalWords){
-					bestGenerations[r] = g;
-					minGenerationFound = true;
-					sum += g;
-					if(g < min) min = g;
-					if(g > max) max = g;
-				}
-			}
-			System.out.print("Best solution, score: ");
-			System.out.println(population.getBest().getScore());
-			System.out.println(population.getBest().toString());
+		for (int g = 0; g < generations; g++) {
+			System.out.println("Generation " + (g+1));
+			population.runGeneration(mutationOperators, mutationMaxTimes);
 		}
-		double mean = sum / rounds;
-		int median = bestGenerations[rounds/2];
-		double stdDev = calculateSD(bestGenerations,sum, mean);
-		System.out.println("Genetic Algorithm Statistics after " + rounds + " for length " + Solution.WHEEL_COUNT + ":");
-		System.out.println("Min: " + min);
-		System.out.println("Max: " + max);
-		System.out.println("Mean: " + mean);
-		System.out.println("Median: " + median);
-		System.out.println("Standard Deviation: " + stdDev);
+		System.out.print("Best solution, score: ");
+		System.out.println(population.getBest().getScore());
+		System.out.println(population.getBest().toString());
+
+//		int min = Integer.MAX_VALUE;
+//		int max = Integer.MIN_VALUE;
+//		double sum = 0.0;
+//		int[] bestGenerations = new int[rounds];
+//		for(int r = 0; r < rounds; r++){
+//			boolean minGenerationFound = false;
+//			for (int g = 0; g < generations; g++) {
+//				System.out.println("Generation " + (g+1));
+//				population.runGeneration(mutationOperators, mutationMaxTimes);
+//				if(!minGenerationFound && population.getBest().getScore() == totalWords){
+//					bestGenerations[r] = g;
+//					minGenerationFound = true;
+//					sum += g;
+//					if(g < min) min = g;
+//					if(g > max) max = g;
+//				}
+//			}
+//			System.out.print("Best solution, score: ");
+//			System.out.println(population.getBest().getScore());
+//			System.out.println(population.getBest().toString());
+//		}
+//		double mean = sum / rounds;
+//		int median = bestGenerations[rounds/2];
+//		double stdDev = calculateSD(bestGenerations,sum, mean);
+//		System.out.println("Genetic Algorithm Statistics after " + rounds + " for length " + Solution.WHEEL_COUNT + ":");
+//		System.out.println("Min: " + min);
+//		System.out.println("Max: " + max);
+//		System.out.println("Mean: " + mean);
+//		System.out.println("Median: " + median);
+//		System.out.println("Standard Deviation: " + stdDev);
 
 
 	}

@@ -1,0 +1,348 @@
+BEST InitOpChooseWords: 2728.703011170471 From: 2059 words. /arkdnyhwmj//mwyluaqbsn//btdipzesua//s dibwltrp/
+BEST InitOpChooseWords: 3230.3600654664483 From: 2444 words. /fhmwogqaev//iuehmtpbla//clofaqrmnt//ausc pvhdo/
+BEST InitOpChooseWords: 3830.0657667012806 From: 2889 words. /ckwadlispf//fgrtahedcw//abgjiprens//f blaptsmz/
+BEST InitOpChooseWords: 4101.958252740168 From: 3102 words. /wcvmogafsl//orecawgixm//mlutesarvo//asth niolb/
+BEST InitOpChooseWords: 4170.590488349824 From: 3133 words. /adtfnkspzb//nuaercbyig//npimvtescl//alfiu enks/
+Generation 1
+BEST  4518.69674556213 From: 3380 words. /arftnkspwm//uoaergytbk//clsrnpeuvi//i snacekdl/
+Population Stats: best: 4518.69674556213 worst: 2393.0138504155125 ave: 3265.6827462682586
+Generation 2
+Time (ms): 145720
+Population Stats: best: 4518.69674556213 worst: 3212.614053377815 ave: 3696.2132680227733
+Generation 3
+BEST  4571.529927007299 From: 3425 words. /arftndpwmk//uaergytbko//clsrpneuvi//s dncltiea/
+Time (ms): 126583
+Population Stats: best: 4571.529927007299 worst: 3558.4853768278963 ave: 3888.9899738086183
+Generation 4
+Time (ms): 146419
+Population Stats: best: 4571.529927007299 worst: 3731.935185185185 ave: 4028.9785466030203
+Generation 5
+BEST  4634.462785983203 From: 3453 words. /stfaonrkdc//riaoclsewu//htrpesfvox//nelas ctog/
+Time (ms): 152946
+Population Stats: best: 4634.462785983203 worst: 3823.4815459610027 ave: 4134.274663014743
+Generation 6
+BEST  4788.568830442082 From: 3574 words. /mpiasgfctk//htaerimxql//pearnicbtd//pescldkia /
+BEST  5050.172688629118 From: 3764 words. /amkpwdcrfn//uaeoitnwxc//csrtebynil//es tclgnad/
+Time (ms): 193335
+Population Stats: best: 5050.172688629118 worst: 3990.660642570281 ave: 4310.684787786297
+Generation 7
+BEST  5077.772474144789 From: 3771 words. /pmkacnwrfd//uioatnwxce//csrtifvnel//cs tnlogea/
+Time (ms): 192113
+Population Stats: best: 5077.772474144789 worst: 4267.685278389431 ave: 4543.68118272238
+Generation 8
+BEST  5091.252900843881 From: 3792 words. /amkpwdgrfn//uaioetnwxc//csrnplietb//as ncekdli/
+Time (ms): 203509
+Population Stats: best: 5091.252900843881 worst: 4473.7809793968345 ave: 4720.703327688042
+Generation 9
+BEST  5189.991739803821 From: 3874 words. /arftnkcmsi//uaerigwbno//clsrpenvui//ceadlntis /
+BEST  5415.1380292151525 From: 4039 words. /amkwshdnfp//uaeoinxwrc//cortesamnl//gs ncteadl/
+Time (ms): 246366
+Population Stats: best: 5415.1380292151525 worst: 4701.708499714775 ave: 4915.617300637327
+Generation 10
+BEST  5785.769927957239 From: 4303 words. /ahcmdspfwk//uoayriectk//lsaredptcn//s ilnekcda/
+Time (ms): 232353
+Population Stats: best: 5785.769927957239 worst: 4892.739142385926 ave: 5107.509338163723
+Generation 11
+Time (ms): 247150
+Population Stats: best: 5785.769927957239 worst: 5029.591126461211 ave: 5241.17454135686
+Generation 12
+Time (ms): 243619
+Population Stats: best: 5785.769927957239 worst: 5158.208788351534 ave: 5327.2097515666255
+Generation 13
+Time (ms): 262444
+Population Stats: best: 5785.769927957239 worst: 5210.053562209602 ave: 5402.070988186426
+Generation 14
+Time (ms): 267760
+Population Stats: best: 5785.769927957239 worst: 5292.800354251012 ave: 5474.282165719049
+Generation 15
+BEST  5885.521495540818 From: 4373 words. /ahcmdknwsp//aouyrickte//lsrnedptca//s ilnekcda/
+Time (ms): 285781
+Population Stats: best: 5885.521495540818 worst: 5402.122737416315 ave: 5573.509230031637
+Generation 16
+BEST  6025.833519179304 From: 4484 words. /ampufrcnsk//uaeoiwtncs//psredtcibn//es tclniad/
+Time (ms): 306190
+Population Stats: best: 6025.833519179304 worst: 5546.681598062954 ave: 5688.164672096531
+Generation 17
+BEST  6027.6289315190725 From: 4483 words. /ascdmpwfkh//euaoicthlm//serdptcnal// ailnekcsp/
+BEST  6072.657278550917 From: 4527 words. /npmsrtkdcw//eoasrlihuc//iscenpomrl//edaktnis l/
+Time (ms): 257676
+Population Stats: best: 6072.657278550917 worst: 5612.468967169902 ave: 5749.434644600352
+Generation 18
+Time (ms): 299166
+Population Stats: best: 6072.657278550917 worst: 5684.43428232503 ave: 5821.134542645066
+Generation 19
+BEST  6079.370234929078 From: 4512 words. /afcmdsnwhp//rouiltkcea//dslnterapc//sdae cilnk/
+BEST  6205.465108695652 From: 4600 words. /tkmpfdwnca//uoeaicthlm//ceriatndls//scdonliae /
+Time (ms): 351369
+Population Stats: best: 6205.465108695652 worst: 5744.246013133208 ave: 5882.334781049415
+Generation 20
+Time (ms): 310750
+Population Stats: best: 6205.465108695652 worst: 5821.510395010395 ave: 5949.495075276366
+Generation 21
+BEST  6430.065058479532 From: 4788 words. /pfcmsdatkr//hoieucrlat//tcldernsap//ldae costk/
+Time (ms): 305546
+Population Stats: best: 6430.065058479532 worst: 5891.26842948718 ave: 6037.240581575903
+Generation 22
+Time (ms): 345587
+Population Stats: best: 6430.065058479532 worst: 6004.191570026762 ave: 6133.1753268546245
+Generation 23
+Time (ms): 350276
+Population Stats: best: 6430.065058479532 worst: 6069.90155210643 ave: 6204.415361247587
+Generation 24
+BEST  6540.266090890397 From: 4863 words. /kamcfngdsp//euiclsxrao//niceplasmr//s lteoidca/
+Time (ms): 377125
+Population Stats: best: 6540.266090890397 worst: 6112.430094526269 ave: 6264.224235468797
+Generation 25
+BEST  6573.09901599016 From: 4878 words. /rpsncmfadk//auoeitrcls//celdipnast//letnka sic/
+Time (ms): 381123
+Population Stats: best: 6573.09901599016 worst: 6189.773071923743 ave: 6330.904029633881
+Generation 26
+BEST  6588.982448979592 From: 4900 words. /aksncfdmhp//eaoriclsut//aeldpnstci//tnpkse cai/
+BEST  6590.224152106886 From: 4865 words. /admnwfhspc//uaoierlhts//esdprtmcna//ps nclteai/
+BEST  6709.620359160614 From: 4956 words. /dpmncsfahk//uoaicrlhes//rstmlpecan//s laoiednc/
+Time (ms): 377130
+Population Stats: best: 6709.620359160614 worst: 6277.152304394426 ave: 6397.464566492702
+Generation 27
+Time (ms): 401638
+Population Stats: best: 6709.620359160614 worst: 6328.321314273522 ave: 6451.3072397690075
+Generation 28
+BEST  6769.706193806193 From: 5005 words. /dfcmsatknp//uoaecrlhsi//rcaednsltm//s ailtnodc/
+BEST  6845.582546241637 From: 5082 words. /dfcaspnktm//uoiehlsacr//rstimcaenl//s aonltdci/
+Time (ms): 327811
+Population Stats: best: 6845.582546241637 worst: 6368.142902341278 ave: 6516.221741181738
+Generation 29
+Time (ms): 347000
+Population Stats: best: 6845.582546241637 worst: 6419.278945156546 ave: 6603.860133216059
+Generation 30
+BEST  6856.760553701159 From: 5093 words. /npmdcfarks//uoaisrlhec//rscdatnipm//s laeicpod/
+Time (ms): 28685062
+Population Stats: best: 6856.760553701159 worst: 6548.441598360656 ave: 6676.364738466359
+Generation 31
+BEST  7007.413294797688 From: 5190 words. /dpmnsfktca//uiaohlscre//rstcmiapln//s lacetdpi/
+Time (ms): 437098
+Population Stats: best: 7007.413294797688 worst: 6612.818191056911 ave: 6757.326490824118
+Generation 32
+Time (ms): 359123
+Population Stats: best: 7007.413294797688 worst: 6673.734141414141 ave: 6804.630492769075
+Generation 33
+BEST  7049.806729114892 From: 5231 words. /dfsankmpct//eauismlrco//rmsctealdn//tleosic ad/
+Time (ms): 470583
+Population Stats: best: 7049.806729114892 worst: 6778.878192338388 ave: 6868.807295422397
+Generation 34
+BEST  7141.402083333333 From: 5280 words. /dkmncsftap//uiaserltco//alteisncmr//s liotecpa/
+Time (ms): 459762
+Population Stats: best: 7141.402083333333 worst: 6839.11119873817 ave: 6919.65485337339
+Generation 35
+Time (ms): 487464
+Population Stats: best: 7141.402083333333 worst: 6859.906434474617 ave: 6948.285177635914
+Generation 36
+Time (ms): 458484
+Population Stats: best: 7141.402083333333 worst: 6913.372197309417 ave: 6992.513909261911
+Generation 37
+Time (ms): 400584
+Population Stats: best: 7141.402083333333 worst: 6946.59606101564 ave: 7022.594911388272
+Generation 38
+BEST  7244.53939281058 From: 5369 words. /tpmnafhscd//uoaecrsmti//rstmpailec//s pdcetlia/
+Time (ms): 447421
+Population Stats: best: 7244.53939281058 worst: 6971.039021549213 ave: 7043.075598510941
+Generation 39
+Time (ms): 470646
+Population Stats: best: 7244.53939281058 worst: 6998.047678674629 ave: 7058.995460046014
+Generation 40
+Time (ms): 462583
+Population Stats: best: 7244.53939281058 worst: 7015.677756471716 ave: 7070.453779157864
+Generation 41
+Time (ms): 441037
+Population Stats: best: 7244.53939281058 worst: 7031.743007662835 ave: 7100.504726468527
+Generation 42
+Time (ms): 3624942
+Population Stats: best: 7244.53939281058 worst: 7078.646239022528 ave: 7124.782593373762
+Generation 43
+Time (ms): 531310
+Population Stats: best: 7244.53939281058 worst: 7099.1999430631995 ave: 7140.385312861448
+Generation 44
+BEST  7311.433795013851 From: 5415 words. /cdmnaprtfs//ioaeumtcrs//scaeinmrtp//s aoictedp/
+Time (ms): 497307
+Population Stats: best: 7311.433795013851 worst: 7120.670815124454 ave: 7162.727206978011
+Generation 45
+Time (ms): 434925
+Population Stats: best: 7311.433795013851 worst: 7127.705402843602 ave: 7178.7556382525745
+Generation 46
+BEST  7317.019245003701 From: 5404 words. /dpmnafstcr//sortcaemiu//psmceralti//e scpltida/
+Time (ms): 567360
+Population Stats: best: 7317.019245003701 worst: 7141.402083333333 ave: 7200.637467036699
+Generation 47
+Time (ms): 490288
+Population Stats: best: 7317.019245003701 worst: 7167.327683615819 ave: 7220.292955664666
+Generation 48
+Time (ms): 514351
+Population Stats: best: 7317.019245003701 worst: 7196.662159624413 ave: 7241.0007472472425
+Generation 49
+BEST  7326.924007386889 From: 5415 words. /ntmcafdrsp//aosructmie//icpmsrntea// saodepict/
+BEST  7363.859507171755 From: 5438 words. /cnfspmdtar//tesiurmoac//rpslnitmac//s tadeoipc/
+Time (ms): 494494
+Population Stats: best: 7363.859507171755 worst: 7226.117118802619 ave: 7266.849349789763
+Generation 50
+BEST  7375.964881716486 From: 5453 words. /spnmactfdr//usairmoect//ancpsdrmit//acetdpio s/
+Time (ms): 467536
+Population Stats: best: 7375.964881716486 worst: 7251.851135094901 ave: 7291.289087498422
+Generation 51
+Time (ms): 533582
+Population Stats: best: 7375.964881716486 worst: 7277.441476534966 ave: 7309.268850138488
+Generation 52
+BEST  7377.7487621492755 From: 5453 words. /cpnmfstdra//uormteisca//ancptdsirm//adeiptco s/
+Time (ms): 527094
+Population Stats: best: 7377.7487621492755 worst: 7298.079142698089 ave: 7327.052680187915
+Generation 53
+Time (ms): 549964
+Population Stats: best: 7377.7487621492755 worst: 7314.168882733149 ave: 7337.241960584634
+Generation 54
+BEST  7377.863928112965 From: 5453 words. /pscrdmatfn//uaotmrcesi//nrdpitmacs//a scotipde/
+Time (ms): 536858
+Population Stats: best: 7377.863928112965 worst: 7326.924007386889 ave: 7345.9029055790525
+Generation 55
+Time (ms): 617143
+Population Stats: best: 7377.863928112965 worst: 7335.785226223454 ave: 7354.4740130110495
+Generation 56
+BEST  7389.427196038878 From: 5453 words. /ncpmtsrdaf//atmrosieuc//rntcadsimp//e scptodia/
+BEST  7391.54474601137 From: 5453 words. /cntsfpmard//sioactmeru//tprsdcmnia//s eaditpco/
+Time (ms): 498370
+Population Stats: best: 7391.54474601137 worst: 7349.925874769798 ave: 7364.056311746279
+Generation 57
+Time (ms): 530798
+Population Stats: best: 7391.54474601137 worst: 7357.429753585877 ave: 7367.8923104851665
+Generation 58
+BEST  7398.299743260591 From: 5453 words. /mpcnfsradt//urmcteoisa//rntcmdsiap//aoeditcs p/
+Time (ms): 525525
+Population Stats: best: 7398.299743260591 worst: 7362.121217678342 ave: 7375.276566086539
+Generation 59
+Time (ms): 600547
+Population Stats: best: 7398.299743260591 worst: 7372.821841188336 ave: 7381.213875847061
+Generation 60
+Time (ms): 501088
+Population Stats: best: 7398.299743260591 worst: 7376.712085090776 ave: 7384.331527049464
+Generation 61
+Time (ms): 567404
+Population Stats: best: 7398.299743260591 worst: 7380.324041811847 ave: 7385.971630295251
+Generation 62
+BEST  7408.725013753897 From: 5453 words. /cnpsmdftra//asmuietrco//tprsdnciam//s eadiptoc/
+Time (ms): 483172
+Population Stats: best: 7408.725013753897 worst: 7382.004768017605 ave: 7387.902457362919
+Generation 63
+Time (ms): 464125
+Population Stats: best: 7408.725013753897 worst: 7383.476159911975 ave: 7388.559270126536
+Generation 64
+Time (ms): 515956
+Population Stats: best: 7408.725013753897 worst: 7384.200715202641 ave: 7389.870119658903
+Generation 65
+Time (ms): 473516
+Population Stats: best: 7408.725013753897 worst: 7385.5575829818445 ave: 7390.683509077569
+Generation 66
+Time (ms): 517023
+Population Stats: best: 7408.725013753897 worst: 7385.7707683843755 ave: 7391.167870896752
+Generation 67
+Time (ms): 441269
+Population Stats: best: 7408.725013753897 worst: 7385.927929580048 ave: 7391.220983862093
+Generation 68
+Time (ms): 513814
+Population Stats: best: 7408.725013753897 worst: 7386.908215661104 ave: 7391.922512836968
+Generation 69
+Time (ms): 497751
+Population Stats: best: 7408.725013753897 worst: 7387.464514945901 ave: 7392.822320282413
+Generation 70
+Time (ms): 541061
+Population Stats: best: 7408.725013753897 worst: 7388.412433522832 ave: 7393.391862277645
+Generation 71
+Time (ms): 518875
+Population Stats: best: 7408.725013753897 worst: 7388.595635430039 ave: 7393.706734824866
+Generation 72
+Time (ms): 509325
+Population Stats: best: 7408.725013753897 worst: 7389.427196038878 ave: 7394.451769668073
+Generation 73
+Time (ms): 547942
+Population Stats: best: 7408.725013753897 worst: 7389.992756280946 ave: 7395.40603566844
+Generation 74
+Time (ms): 432806
+Population Stats: best: 7408.725013753897 worst: 7390.353750229232 ave: 7395.456003576013
+Generation 75
+Time (ms): 494339
+Population Stats: best: 7408.725013753897 worst: 7391.54474601137 ave: 7396.570917384926
+Generation 76
+Time (ms): 524113
+Population Stats: best: 7408.725013753897 worst: 7391.654960572162 ave: 7396.749944984413
+Generation 77
+Time (ms): 478130
+Population Stats: best: 7408.725013753897 worst: 7392.230698697965 ave: 7397.246036585367
+Generation 78
+Time (ms): 523768
+Population Stats: best: 7408.725013753897 worst: 7392.370805061434 ave: 7397.453188611774
+Generation 79
+Time (ms): 452962
+Population Stats: best: 7408.725013753897 worst: 7392.514028974876 ave: 7397.535890794058
+Generation 80
+Time (ms): 408664
+Population Stats: best: 7408.725013753897 worst: 7393.042820465798 ave: 7398.220683568678
+Generation 81
+Time (ms): 495270
+Population Stats: best: 7408.725013753897 worst: 7393.306070053181 ave: 7398.470864661654
+Generation 82
+Time (ms): 468904
+Population Stats: best: 7408.725013753897 worst: 7394.892719603888 ave: 7399.032569227947
+Generation 83
+Time (ms): 465746
+Population Stats: best: 7408.725013753897 worst: 7395.723088208326 ave: 7399.4584953236745
+Generation 84
+Time (ms): 467249
+Population Stats: best: 7408.725013753897 worst: 7395.834036310288 ave: 7399.778484320556
+Generation 85
+BEST  7408.738675958188 From: 5453 words. /dcnmpstarf//siaouetcrm//acrmpsdnti//ptedias oc/
+Time (ms): 477582
+Population Stats: best: 7408.738675958188 worst: 7397.194388410049 ave: 7400.316506968641
+Generation 86
+Time (ms): 506671
+Population Stats: best: 7408.738675958188 worst: 7397.223363286264 ave: 7400.460012836971
+Generation 87
+Time (ms): 509822
+Population Stats: best: 7408.738675958188 worst: 7397.305978360536 ave: 7400.652947918577
+Generation 88
+Time (ms): 481717
+Population Stats: best: 7408.738675958188 worst: 7397.957637997432 ave: 7401.000155877498
+Generation 89
+Time (ms): 460355
+Population Stats: best: 7408.738675958188 worst: 7398.0247570144875 ave: 7401.031170915094
+Generation 90
+Time (ms): 477262
+Population Stats: best: 7408.738675958188 worst: 7398.0277828718135 ave: 7401.033412800294
+Generation 91
+Time (ms): 476546
+Population Stats: best: 7408.738675958188 worst: 7398.083348615441 ave: 7401.192531633962
+Generation 92
+Time (ms): 500628
+Population Stats: best: 7408.738675958188 worst: 7398.214835870163 ave: 7401.516539061066
+Generation 93
+Time (ms): 510321
+Population Stats: best: 7408.738675958188 worst: 7398.298642948836 ave: 7401.84109664405
+Generation 94
+Time (ms): 425029
+Population Stats: best: 7408.738675958188 worst: 7398.299743260591 ave: 7401.865977443609
+Generation 95
+Time (ms): 511307
+Population Stats: best: 7408.738675958188 worst: 7398.705849990831 ave: 7402.008156060883
+Generation 96
+BEST  7412.008985879333 From: 5453 words. /cnpmtfards//ieactruosm//rmpaisdntc//aetocs ipd/
+Time (ms): 481569
+Population Stats: best: 7412.008985879333 worst: 7399.046396479002 ave: 7402.511738951034
+Generation 97
+Time (ms): 509232
+Population Stats: best: 7412.008985879333 worst: 7399.322207958921 ave: 7402.7478039611215
+Generation 98
+Time (ms): 450864
+Population Stats: best: 7412.008985879333 worst: 7399.458646616541 ave: 7402.901973684211
+Generation 99
+Time (ms): 523814
+Population Stats: best: 7412.008985879333 worst: 7400.409499358151 ave: 7403.58974876215
+Generation 100
+Time (ms): 486607
+Population Stats: best: 7412.008985879333 worst: 7400.825233816248 ave: 7404.019803319274
+Best solution, score: 7412.008985879333
+From: 5453 words. /cnpmtfards//ieactruosm//rmpaisdntc//aetocs ipd/

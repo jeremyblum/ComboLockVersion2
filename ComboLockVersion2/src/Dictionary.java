@@ -14,6 +14,7 @@ import java.util.Scanner;
  */
 public class Dictionary {
 	static ArrayList<String> rawWords = new ArrayList<>();
+	static Map<Character,Integer>[] commonLetters = new Map[Solution.WHEEL_COUNT];; // frequency of the letters at each index
 	
 	/**
 	 * Load the dictionary
@@ -41,6 +42,13 @@ public class Dictionary {
 				while (word.length() < Solution.WHEEL_COUNT)
 					word += ' ';
 				rawWords.add(word);
+				for (int i = 0; i < word.length(); i++) {
+					if(commonLetters[i] == null){
+						commonLetters[i] = new HashMap<Character,Integer>();
+					}
+					//keeps the position and the count of how many times a letter has been seen in a word
+					commonLetters[i].put(word.charAt(i), commonLetters[i].getOrDefault(word.charAt(i), 0) + 1);
+				}
 			}
 		}
 		sc.close();
