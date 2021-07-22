@@ -4,7 +4,7 @@ import java.util.Map;
 /**
  * Create an initial lock configuration by selecting the 10 most common letters for
  * each word position using a raffle method and adding these letters to the configuration
- * @author Eddie, Ryan, Karim
+ * @author JP, Eddie, Ryan, Karim
  *
  */
 public class InitOpRaffle extends InitializationOperator{

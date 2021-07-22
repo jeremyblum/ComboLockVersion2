@@ -13,21 +13,22 @@ public class Optimizer {
 									// process produces
 	static int populationSize = 40; // The size of a generation in the GA
 	static int generations = 100; // The number of generations in the optimization process
-	static int rounds = 1; // the number of rounds the GA will run
+	static int rounds = 1; // the number of rounds the GA will run //delete?
 	static boolean USE_ELITISM = true; // Do we use elitism in determining which solutions to kill
 	
 	// The operators used to produce the initial solutions
-	static InitializationOperator[] initOps = { new InitOpRandom(), new InitOpChooseWords(), new InitOpCommonLetters(), new InitOpRandom()};
+	static InitializationOperator[] initOps = { new InitOpRandom(), new InitOpChooseWords(), new InitOpRaffle()};
 	// The weight that determines how likely each initialization operator will be used
-	static double[] initOpWeights = {1.0,1.0,1.0,1.0};
+	static double[] initOpWeights = {1.0,1.0,1.0};
 	
 	// A list of mutation operators to apply to the solutions
 	static MutationOperator[] mutationOperators = { new MutateChooseLetterFromWord(),
-													new MutateSwapLetterPositions()};
+													new MutateSwapLetterPositions(),
+													new MutateChooseCommonLetter()};
 	// The maximum number of times each mutation operator will run
-	static int[] mutationMaxTimes = {50,50};
+	static int[] mutationMaxTimes = {50,50,50};
 
-	static double totalWords = 5540.0;
+	static double totalWords = 5540.0; //delete?
 	
 	/**
 	 * The driver method for the optimization process
@@ -45,6 +46,7 @@ public class Optimizer {
 		System.out.println(population.getBest().getScore());
 		System.out.println(population.getBest().toString());
 
+		//delete
 //		int min = Integer.MAX_VALUE;
 //		int max = Integer.MIN_VALUE;
 //		double sum = 0.0;

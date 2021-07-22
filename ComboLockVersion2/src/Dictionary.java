@@ -14,7 +14,7 @@ import java.util.Scanner;
  */
 public class Dictionary {
 	static ArrayList<String> rawWords = new ArrayList<>();
-	static Map<Character,Integer>[] commonLetters = new Map[Solution.WHEEL_COUNT];; // frequency of the letters at each index
+	static Map<Character,Integer>[] commonLetters = new Map[Solution.WHEEL_COUNT]; // frequency of the letters at each index
 	
 	/**
 	 * Load the dictionary
