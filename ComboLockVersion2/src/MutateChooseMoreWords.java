@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -8,7 +9,7 @@ import java.util.Map;
  * @author jpa5180
  *
  */
-public class MutateChooseCommonLetterV2 extends MutationOperator{
+public class MutateChooseMoreWords extends MutationOperator{
     static int MAX_TRIES = 1000;
 
     /**
@@ -18,20 +19,20 @@ public class MutateChooseCommonLetterV2 extends MutationOperator{
      */
     @Override
     public Solution run(Solution input) {
-        Solution solution = new Solution();
-        Map<Character,Integer>[] letterCounts = new Map[Dictionary.commonLetters.length];
-        for(int i = 0; i < letterCounts.length; i++) {letterCounts[i] = new HashMap<Character, Integer>(Dictionary.commonLetters[i]);}
+        Solution solution = null;
         boolean ok = false;
         int tries2 = 0;
         while(!ok){
+            solution = new Solution();
             tries2++;
             if (tries2 > MAX_TRIES) {
                 System.err.println("Giving up trying to find new letter");
                 return solution;
             }
+
             char letter = '?';
-            int tries = 0;
             int wheel = -1;
+            int tries = 0;
             while (!ok) {
                 tries++;
                 if (tries > MAX_TRIES) {
@@ -39,28 +40,17 @@ public class MutateChooseCommonLetterV2 extends MutationOperator{
                     return solution;
                 }
 
+                String word = Dictionary.getRandomWord();
                 wheel = Optimizer.prng.nextInt(Solution.WHEEL_COUNT);
-                letter = getMax(letterCounts[wheel]);
+                letter = word.charAt(wheel);
                 ok = !input.hasLetter(wheel, letter);
-                letterCounts[wheel].remove(letter);
             }
-            char oldLetter = '?';
-            ok = false;
-            tries = 0;
-            while (!ok) {
-                tries++;
-                if (tries > MAX_TRIES) {
-                    System.err.println("Giving up trying to find old letter");
-                    return solution;
-                }
-                oldLetter = Solution.alphabet.charAt(Optimizer.prng.nextInt(27));
-                ok = input.hasLetter(wheel, oldLetter);
-            }
+            char oldLetter = getMinLetter(input, wheel);
             for (int w = 0; w < Solution.WHEEL_COUNT; w++) {
                 for (int i = 0; i < Solution.WHEEL_SIZE; i++) {
                     char currentLtr = input.getWheel(w).charAt(i);
                     if (w == wheel && currentLtr == oldLetter) {
-                        solution.addLetter(w, oldLetter);
+                        solution.addLetter(w, letter);
                     }
                     else {
                         solution.addLetter(w, currentLtr);
@@ -68,7 +58,6 @@ public class MutateChooseCommonLetterV2 extends MutationOperator{
                 }
             }
             solution.getScore();
-            input.getScore();
             ok = solution.words.size() > input.words.size();
         }
 
@@ -76,22 +65,29 @@ public class MutateChooseCommonLetterV2 extends MutationOperator{
     }
 
     /**
-     * @param letterCounts a HashMap containing all the letters and the frequency seen at certain position in the words
-     * @return the letter that is the most common in all the words at a certain position
+     * @param input the lock we are mutating
+     * @param wheel the wheel chosen to be mutated by randomness
+     *
+     * @return the letter that made the least amount of words in a lock at a certain wheel
      *
      */
-    public Character getMax(Map<Character,Integer> letterCounts){
-        int count = -1;
-        Character letter = null;
+    public char getMinLetter(Solution input, int wheel){
+        ArrayList<String> words = Dictionary.score(input);
+        HashMap<Character, Integer> letterCounts = new HashMap<>();
+        for(String w : words){
+            char wordLetter = w.charAt(wheel);
+            letterCounts.put(wordLetter, letterCounts.getOrDefault(wordLetter, 0) + 1);
+        }
+
+        int count = Integer.MAX_VALUE;
+        char letter = '?';
         for(Character l : letterCounts.keySet()){
             int letterTotal = letterCounts.get(l);
-            if(count < letterTotal){
+            if(count > letterTotal){
                 count = letterTotal;
                 letter = l;
             }
         }
-//        System.out.print(letter + " ");
-//        System.out.print(count + "\n");
         return letter;
     }
 

@@ -24,9 +24,11 @@ public class Optimizer {
 	// A list of mutation operators to apply to the solutions
 	static MutationOperator[] mutationOperators = { new MutateChooseLetterFromWord(),
 													new MutateSwapLetterPositions(),
-													new MutateChooseCommonLetter()};
+													new MutateChooseCommonLetter(),
+													new MutateSwapCommonLetter()};
+
 	// The maximum number of times each mutation operator will run
-	static int[] mutationMaxTimes = {50,50,50};
+	static int[] mutationMaxTimes = {50,50,50,50};
 
 	static double totalWords = 5540.0; //delete?
 	

@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Map;
 
 /**
@@ -9,6 +10,7 @@ import java.util.Map;
  */
 public class MutateSwapCommonLetter extends MutationOperator{
     static int MAX_TRIES = 1000;
+    static boolean[] isCommon; //keep track of what letters are common in a wheel
 
     /**
      * Create a new lock configuration
@@ -19,12 +21,34 @@ public class MutateSwapCommonLetter extends MutationOperator{
     public Solution run(Solution input) {
         Solution solution = new Solution();
         char letter = '?';
-        int wheel = Optimizer.prng.nextInt(Solution.WHEEL_COUNT);
-        int pos = Optimizer.prng.nextInt(Solution.WHEEL_SIZE);
-        int pos1 = (pos + 1) % Solution.WHEEL_SIZE;
-        int pos2 = getMinIndex(input.getWheel(wheel), wheel, pos);
-        while(pos2 == pos1 || pos2 == -1) {
-            pos2 = Optimizer.prng.nextInt(Solution.WHEEL_SIZE);
+        boolean ok = false;
+        int wheel = -1;
+        int pos1 = -1;
+        int pos2 = -1;
+        int tries = 0;
+
+        while(!ok){
+            tries++;
+            if (tries > MAX_TRIES) {
+                System.err.println("Giving up trying to find new letter");
+                return solution;
+            }
+
+            wheel = Optimizer.prng.nextInt(Solution.WHEEL_COUNT);
+            orderLetters(input.getWheel(wheel), wheel);
+            int pos = Optimizer.prng.nextInt(Solution.WHEEL_SIZE);
+            boolean posCommon = isCommon[pos];
+            pos1 = (pos + 1) % Solution.WHEEL_SIZE;
+            boolean pos1Common = isCommon[pos1];
+            pos2 = (pos1 + 1) % Solution.WHEEL_SIZE;
+            boolean pos2Common = isCommon[pos2];
+            if(posCommon == pos1Common){
+                while(pos2Common == pos1Common && pos != pos2) {
+                    pos2 = (pos2 + 1) % Solution.WHEEL_SIZE;
+                    pos2Common = isCommon[pos2];
+                }
+                ok = pos != pos2;
+            }
         }
         for (int w = 0; w < Solution.WHEEL_COUNT; w++) {
             String sourceWheel = input.getWheel(w);
@@ -45,24 +69,30 @@ public class MutateSwapCommonLetter extends MutationOperator{
     }
 
     /**
+     * Orders the letters from least common to most common and creates a boolean
+     * array to keep track of which letters are common in a wheel
      * @param sourceWheel letters on a certain wheel of the lock
      * @param wheel the number of the specific wheel of a the lock
-     * @param position the position of the letter whe are trying to avoid
-     * @return the position of the letter that is the least common in all the words at a certain position of a certain wheel
      *
      */
-    public int getMinIndex(String sourceWheel, int wheel, int position){
-        int pos = -1;
-        int count = Integer.MAX_VALUE;
+    public void orderLetters(String sourceWheel, int wheel){
+        int [] letterOrder = new int[sourceWheel.length()];
+        isCommon = new boolean[sourceWheel.length()];
         for(int i = 0; i < sourceWheel.length(); i++){
-            int letterCount = Dictionary.commonLetters[wheel].getOrDefault(sourceWheel.charAt(i), -1);
-            if (letterCount != -1 && i != position && letterCount < count){
-                count = letterCount;
-                pos = i;
+            int letterCount = Dictionary.commonLetters[wheel].getOrDefault(sourceWheel.charAt(i), 0);
+            letterOrder[i] = letterCount;
+        }
+        Arrays.sort(letterOrder);
+        for(int l = 0; l < sourceWheel.length(); l++){
+            int letterCount = Dictionary.commonLetters[wheel].getOrDefault(sourceWheel.charAt(l), 0);
+
+            for(int n = 0; n < letterOrder.length; n++){
+                if(letterOrder[n] == letterCount){
+                    isCommon[l] = n >= (sourceWheel.length() / 2);
+                    letterOrder[n] = -1;
+                    break;
+                }
             }
         }
-//        System.out.print(letter + " ");
-//        System.out.print(count + "\n");
-        return pos;
     }
 }

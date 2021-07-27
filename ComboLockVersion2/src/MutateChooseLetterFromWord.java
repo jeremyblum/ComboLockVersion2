@@ -48,7 +48,7 @@ public class MutateChooseLetterFromWord extends MutationOperator{
 			for (int i = 0; i < Solution.WHEEL_SIZE; i++) {
 				char currentLtr = input.getWheel(w).charAt(i);
 				if (w == wheel && currentLtr == oldLetter) {
-					solution.addLetter(w, oldLetter);
+					solution.addLetter(w, letter);
 				}
 				else {
 					solution.addLetter(w, currentLtr);
