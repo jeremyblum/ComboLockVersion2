@@ -59,14 +59,16 @@ public class Solution implements Comparable<Solution> {
 			}
 			Arrays.sort(overallAve);
 			score = 0.0;
-			for(int i = 0; i < overallAve.length; i++){
-				aveSoFar = overallAve[i] + aveSoFar;
-				score += aveSoFar;
-			}
+			if(words.size() > 0.0){
+				for(int i = 0; i < overallAve.length; i++){
+					aveSoFar = overallAve[i] + aveSoFar;
+					score += aveSoFar;
+				}
 
-			score -= adjustment;
-			score /= words.size();
-			//System.out.println("Score: " + score + " in " + (System.currentTimeMillis() - time) + " ms");
+				score -= adjustment;
+				score /= words.size();
+				//System.out.println("Score: " + score + " in " + (System.currentTimeMillis() - time) + " ms");
+			}
 		}
 		return score;
 	}

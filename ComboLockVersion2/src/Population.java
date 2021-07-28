@@ -120,8 +120,11 @@ public class Population {
 			Solution solution = children[i];
 			for (int j = 0; j < mutationOperators.length; j++) {
 				MutationOperator mutation =  mutationOperators[j];
+				//System.out.println(mutation.getName()); //delete
 				int times = Optimizer.prng.nextInt(maxMutations[j]);
 				for (int t = 0; t < times; t++) {
+					//System.out.print("score: " + children[i].getScore() + " "); //delete
+					//System.out.println(children[i]); //delete
 					solution = mutation.run(children[i]); // This would be another way to generate the mutations by always
 															// starting with the best mutation seen so far
 					//solution = mutation.run(solution);

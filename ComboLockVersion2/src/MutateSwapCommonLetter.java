@@ -10,7 +10,7 @@ import java.util.Map;
  */
 public class MutateSwapCommonLetter extends MutationOperator{
     static int MAX_TRIES = 1000;
-    static boolean[] isCommon; //keep track of what letters are common in a wheel
+    boolean[] isCommon; //keep track of what letters are common in a wheel
 
     /**
      * Create a new lock configuration
@@ -30,7 +30,7 @@ public class MutateSwapCommonLetter extends MutationOperator{
         while(!ok){
             tries++;
             if (tries > MAX_TRIES) {
-                System.err.println("Giving up trying to find new letter");
+                System.err.println("Giving up trying to swap letters");
                 return solution;
             }
 

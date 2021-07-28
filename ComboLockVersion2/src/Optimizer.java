@@ -24,7 +24,7 @@ public class Optimizer {
 	// A list of mutation operators to apply to the solutions
 	static MutationOperator[] mutationOperators = { new MutateChooseLetterFromWord(),
 													new MutateSwapLetterPositions(),
-													new MutateChooseCommonLetter(),
+													new MutateChooseMoreWords(),
 													new MutateSwapCommonLetter()};
 
 	// The maximum number of times each mutation operator will run
