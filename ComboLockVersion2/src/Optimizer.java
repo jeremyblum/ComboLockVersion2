@@ -25,12 +25,13 @@ public class Optimizer {
 	static MutationOperator[] mutationOperators = { new MutateChooseLetterFromWord(),
 													new MutateSwapLetterPositions(),
 													new MutateChooseMoreWords(),
-													new MutateSwapCommonLetter()};
+													new MutateSwapCommonLetter(),
+													new MutateSwapOftenSwitched()};
 
 	// The maximum number of times each mutation operator will run
-	static int[] mutationMaxTimes = {50,50,50,50};
+	static int[] mutationMaxTimes = {50,50,50,50,50};
 
-	static double totalWords = 5540.0; //delete?
+	public static int sleep = 0; //number of mutation iterations a mutation operator will sleep for.
 	
 	/**
 	 * The driver method for the optimization process

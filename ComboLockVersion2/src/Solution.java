@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Map;
 
 /**
  * A class whose objects represent lock configurations
@@ -59,7 +60,7 @@ public class Solution implements Comparable<Solution> {
 			}
 			Arrays.sort(overallAve);
 			score = 0.0;
-			if(words.size() > 0.0){
+			if(words.size() > 0){
 				for(int i = 0; i < overallAve.length; i++){
 					aveSoFar = overallAve[i] + aveSoFar;
 					score += aveSoFar;
@@ -71,6 +72,70 @@ public class Solution implements Comparable<Solution> {
 			}
 		}
 		return score;
+	}
+
+	/**
+	 * Get the fitness of the lock configuration
+	 * @return a score, which is currently the total weight of words that can be made from the
+	 *         lock configuration
+	 */
+	char getMaxLetter(char position, int wheel) {
+		if (words == null) {
+			//long time = System.currentTimeMillis();
+			words = Dictionary.score(this);
+			//System.out.println("Can make " + words.size());
+		}
+		char maxLetter = '?';
+		Map<Character, Integer> letterSwitchCount = new HashMap<>();
+
+		for (int i = 0; i < words.size(); i++) {
+			int closestDist = Integer.MAX_VALUE;
+			int closestNextDist = Integer.MAX_VALUE;
+			int closestWord = -1;
+			int closestNextWord = -1;
+			for (int j = 0; j < words.size(); j++) {
+				if (j == i) continue;
+				int wordDist = distance(i, j);
+				if (wordDist < closestDist) {
+					closestNextDist = closestDist;
+					closestNextWord = closestWord;
+					closestDist = wordDist;
+					closestWord = j;
+				}
+				if (wordDist < closestNextDist && j != closestWord) {
+					closestNextDist = wordDist;
+					closestNextWord = j;
+				}
+				if (closestNextDist == 2) break; // Already found two words very close
+			}
+
+			char letter = words.get(i).charAt(wheel);
+			char closestLetter = words.get(closestWord).charAt(wheel);
+			char closestNextLetter = words.get(closestNextWord).charAt(wheel);
+			if(letter == position){
+				letterSwitchCount.put(closestLetter, letterSwitchCount.getOrDefault(closestLetter, 0) + 1);
+				letterSwitchCount.put(closestNextLetter, letterSwitchCount.getOrDefault(closestNextLetter, 0) + 1);
+			}
+			else if(closestLetter == position){
+				letterSwitchCount.put(letter, letterSwitchCount.getOrDefault(letter, 0) + 1);
+				letterSwitchCount.put(closestNextLetter, letterSwitchCount.getOrDefault(closestNextLetter, 0) + 1);
+			}
+			else if(closestNextLetter == position){
+				letterSwitchCount.put(letter, letterSwitchCount.getOrDefault(letter, 0) + 1);
+				letterSwitchCount.put(closestLetter, letterSwitchCount.getOrDefault(closestLetter, 0) + 1);
+			}
+		}
+
+		int count = -1;
+		for(Character l : letterSwitchCount.keySet()){
+			int letterTotal = letterSwitchCount.getOrDefault(l, 0);
+			if(count < letterTotal && l != position){
+				count = letterTotal;
+				maxLetter = l;
+			}
+		}
+
+		return maxLetter;
 	}
 	
 	/**

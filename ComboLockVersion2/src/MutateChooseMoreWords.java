@@ -10,7 +10,8 @@ import java.util.Map;
  *
  */
 public class MutateChooseMoreWords extends MutationOperator{
-    static int MAX_TRIES = 10;
+    static int MAX_TRIES = 1000;
+    static int MAX_TRIES2 = 5;
 
     /**
      * Create a new lock configuration
@@ -19,13 +20,19 @@ public class MutateChooseMoreWords extends MutationOperator{
      */
     @Override
     public Solution run(Solution input) {
+        if(Optimizer.sleep > 0){
+            //System.out.println(Optimizer.sleep); //delete
+            Optimizer.sleep--;
+            return new Solution();
+        }
         Solution solution = null;
         boolean ok = false;
         int tries2 = 0;
         while(!ok){
             solution = new Solution();
             tries2++;
-            if (tries2 > MAX_TRIES) {
+            if (tries2 > MAX_TRIES2) {
+                Optimizer.sleep = 100;
                 System.err.println("Giving up trying to find new letter 1");
                 return solution;
             }
@@ -40,9 +47,7 @@ public class MutateChooseMoreWords extends MutationOperator{
                     return solution;
                 }
 
-                //String word = Dictionary.getRandomWord();
                 wheel = Optimizer.prng.nextInt(Solution.WHEEL_COUNT);
-                //letter = word.charAt(wheel);
                 letter = Solution.alphabet.charAt(Optimizer.prng.nextInt(27));
                 ok = !input.hasLetter(wheel, letter);
             }
@@ -84,7 +89,7 @@ public class MutateChooseMoreWords extends MutationOperator{
         int count = Integer.MAX_VALUE;
         char letter = '?';
         for(Character l : letterCounts.keySet()){
-            int letterTotal = letterCounts.get(l);
+            int letterTotal = letterCounts.getOrDefault(l, 0);
             if(count > letterTotal){
                 count = letterTotal;
                 letter = l;
