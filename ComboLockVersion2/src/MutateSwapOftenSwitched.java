@@ -20,7 +20,7 @@ public class MutateSwapOftenSwitched extends MutationOperator{
         int pos = Optimizer.prng.nextInt(Solution.WHEEL_SIZE);
         char maxLetter = input.getMaxLetter(input.getWheel(wheel).charAt(pos),wheel);
         int pos1 = input.getWheel(wheel).indexOf(maxLetter);
-        int pos2 = (Optimizer.prng.nextInt(Solution.WHEEL_SIZE / 2) + 1 + pos) % Solution.WHEEL_SIZE;
+        int pos2 = (Optimizer.prng.nextInt(Solution.WHEEL_SIZE / 2) + 3 + pos) % Solution.WHEEL_SIZE;
 //        while(pos2 == pos1) {
 //            pos2 = Optimizer.prng.nextInt(Solution.WHEEL_SIZE);
 //        }
